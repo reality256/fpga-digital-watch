@@ -8,16 +8,13 @@ module up_down_counter #(
     input logic clk,
     input logic enable,
     input logic up,
-    output logic [WIDTH-1:0] count
+    output logic [WIDTH-1:0] count = WIDTH'(0)
 );
   //Parameters
   localparam logic [WIDTH-1:0] Max = WIDTH'(MAX);
   localparam logic [WIDTH-1:0] One = WIDTH'(1);
   localparam logic [WIDTH-1:0] Zero = WIDTH'(0);
   logic [WIDTH-1:0] next_count;
-
-  //State initialization
-  initial count = WIDTH'(0);
 
   //State register
   always_ff @(posedge clk) if (enable) count <= next_count;
