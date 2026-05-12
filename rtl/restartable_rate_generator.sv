@@ -1,11 +1,5 @@
 // Restartable Rate Generator
-// When run is low, tick goes low.
-// When run is high:
-// • After run has been high for exactly CYCLE_COUNT-1 rising edges, tick is high for
-// exactly one clock cycle.
-// • Thereafter, after each period of run having remained high for CYCLE_COUNT rising
-// edges, tick is again high for exactly one clock cycle.
-// The edge case CYCLE_COUNT = 1 is supported: tick follows run directly.
+
 `timescale 1ns / 1ps
 module restartable_rate_generator #(
     parameter int CYCLE_COUNT = 2
