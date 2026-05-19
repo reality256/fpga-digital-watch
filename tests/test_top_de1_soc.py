@@ -3,7 +3,7 @@ from conftest import rtl_exists
 
 SOURCES = [
     "key_synchroniser.sv",
-    "user_top.sv",
+    "user_top_watch_v1.sv",
     "binary_to_bcd.sv",
     "seven_segment.sv",
     "decimal_display_driver.sv",
